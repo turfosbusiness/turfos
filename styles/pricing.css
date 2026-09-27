@@ -1,0 +1,12 @@
+
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:15px}
+.price-card{min-width:0;min-height:510px;padding:34px;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.72);box-shadow:var(--shadow);backdrop-filter:blur(20px);transition:transform .45s,box-shadow .45s}
+.price-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}
+.price-card.featured{border-color:rgba(120,184,63,.45);background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(233,244,226,.8))}
+.price-tag{font:9px var(--mono);color:var(--green-dark);letter-spacing:.12em}
+.price-card h2{font-size:34px;margin:15px 0 8px}.price-card>p{height:54px;color:var(--muted);font-size:13px;line-height:1.5}
+.price{margin:34px 0 25px}.price strong{font-size:43px;letter-spacing:-.05em}.price span{color:var(--muted);font:9px var(--mono)}
+.price-card ul{list-style:none;padding:20px 0 0;margin:25px 0 0;border-top:1px solid var(--line)}
+.price-card li{padding:9px 0;color:#68766d;font-size:12px}.price-card li:before{content:"✓";color:var(--green-dark);margin-right:10px}
+@media(max-width:900px){.pricing{grid-template-columns:1fr}.price-card{min-height:0}.price-card>p{height:auto;min-height:45px}}
+.pricing{grid-template-columns:1fr 1fr}.price-card>p{height:auto;min-height:75px}.price strong{font-size:31px}.pricing-note{padding-top:20px}.note-card{border-radius:30px;padding:45px}.note-card h2{font-size:clamp(38px,4.5vw,62px);line-height:1;margin:18px 0}.note-card p{max-width:650px;color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:28px}@media(max-width:900px){.pricing{grid-template-columns:1fr}.note-card{padding:32px}}

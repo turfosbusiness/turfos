@@ -1,0 +1,23 @@
+/* TurfOS Contact — enlarged, balanced glass form */
+.contact-page{width:var(--container);margin:0 auto;min-height:calc(100vh - 100px);display:grid;grid-template-columns:minmax(0,1fr) minmax(500px,620px);gap:clamp(55px,8vw,125px);align-items:center;padding:90px 0}
+.contact-copy h1{font-size:clamp(54px,7vw,90px)}
+.contact-copy>p{max-width:540px;color:var(--muted);font-size:16px;line-height:1.7}
+.contact-detail{margin-top:45px;padding-top:20px;border-top:1px solid var(--line)}
+.contact-detail span{display:block;font:8px var(--mono);color:#7b887f;margin-bottom:10px}
+.contact-detail a{color:var(--green-dark);text-decoration:none}
+.contact-form{width:100%;padding:40px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.78);box-shadow:var(--shadow);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+.contact-form label{display:block;color:#77847b;font:9px var(--mono);letter-spacing:.04em;margin-bottom:20px}
+.contact-form input,.contact-form textarea,.contact-form select{display:block;width:100%;box-sizing:border-box;margin-top:9px;background:rgba(248,250,245,.84);border:1px solid var(--line);border-radius:14px;color:var(--text);padding:15px 16px;outline:none;font:14px var(--sans);transition:border-color .2s,box-shadow .2s,background .2s}
+.contact-form input,.contact-form select{min-height:52px}
+.contact-form textarea{min-height:155px;resize:vertical;line-height:1.5}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:rgba(120,184,63,.55);box-shadow:0 0 0 4px rgba(120,184,63,.08);background:#fff}
+.contact-form .button{margin-top:2px;min-height:48px}
+.form-success{display:none;color:var(--green-dark);font:9px var(--mono);line-height:1.6;margin-top:15px}
+.contact-bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-top:10px}
+.contact-prompt{border-radius:28px;padding:32px}
+.contact-prompt>span{font:9px var(--mono);color:var(--green-dark);letter-spacing:.12em}
+.contact-prompt h2{font-size:31px;line-height:1.05;margin:45px 0 12px}
+.contact-prompt p{color:var(--muted);font-size:13px;line-height:1.65}
+@media(max-width:1050px){.contact-page{grid-template-columns:minmax(0,1fr) minmax(430px,540px);gap:55px}}
+@media(max-width:900px){.contact-page{grid-template-columns:1fr;gap:40px;padding:70px 0}.contact-form{max-width:none;padding:32px}.contact-bottom{grid-template-columns:1fr}}
+@media(max-width:560px){.contact-form{padding:22px;border-radius:23px}.contact-form textarea{min-height:140px}.contact-form input,.contact-form select{min-height:50px}}
