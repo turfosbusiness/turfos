@@ -1,0 +1,19 @@
+{
+  "revision": "20261026-refresh",
+  "status": "Local files updated; not published",
+  "pages": [
+    "index.html",
+    "pages/product.html",
+    "pages/pricing.html",
+    "pages/about.html",
+    "pages/contact.html",
+    "pages/demo.html"
+  ],
+  "notes": [
+    "Pricing remains unspecified.",
+    "Interactive demo is clearly labeled sample data.",
+    "Contact form opens an email draft, not a fake sent confirmation.",
+    "Founder names and biographies retained."
+  ],
+  "demo": "Actual Platform UI copied from /Users/luke/Documents/Platform, with a signed-in sample owner session, memory-only storage, mocked API responses, and no real payments or emails."
+}

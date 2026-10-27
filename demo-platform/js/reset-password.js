@@ -1,0 +1,9 @@
+(()=>{
+ const $=id=>document.getElementById(id),query=new URLSearchParams(location.search),fragment=new URLSearchParams(location.hash.slice(1)),resetToken=fragment.get('token');
+ $('account-type').value=query.get('account')==='customer'?'customer':'business';
+ if(resetToken){$('request-form').hidden=true;$('reset-form').hidden=false;$('recovery-intro').textContent='Choose a new password for your TurfOS account.'}
+ function status(message,error=false){const node=$('recovery-status');node.textContent=message;node.hidden=false;node.classList.toggle('error',error)}
+ async function post(path,body){const response=await fetch('/api/auth/password/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),cache:'no-store'});const data=await response.json();if(!response.ok)throw Error(data.error||'This request could not be completed. Please try again.');return data}
+ $('request-form').addEventListener('submit',async event=>{event.preventDefault();const button=event.currentTarget.querySelector('button');button.disabled=true;try{const result=await post('request',{account:$('account-type').value,email:$('recovery-email').value.trim()});status(result.message);button.textContent='Send Another Link'}catch(error){status(error.message,true)}finally{button.disabled=false}});
+ $('reset-form').addEventListener('submit',async event=>{event.preventDefault();if($('new-password').value!==$('confirm-password').value)return status('The passwords do not match.',true);const button=event.currentTarget.querySelector('button');button.disabled=true;try{await post('reset',{token:resetToken,password:$('new-password').value});$('reset-form').reset();$('reset-form').hidden=true;history.replaceState(null,'',location.pathname);status('Your password has been reset. Sign in with your new password.')}catch(error){status(error.message,true)}finally{button.disabled=false}});
+})();

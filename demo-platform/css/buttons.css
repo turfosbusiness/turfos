@@ -1,0 +1,31 @@
+/* Shared action-button geometry, based on New Invoice. Colors express purpose. */
+:root{--button-height:40px;--button-radius:12px;--button-font-size:16px;--button-weight:600;--button-line-height:20px;--button-padding-x:14px;--button-gap:8px;--button-focus:#9CB98C66}
+:is(.btn,.reset-password-link,.recovery-card button,.ux-more-actions>summary,.modebar button,.authpanel .tabs button,a.button){display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:var(--button-gap)!important;box-sizing:border-box!important;min-height:var(--button-height)!important;height:var(--button-height)!important;max-height:none!important;padding:0 var(--button-padding-x)!important;border-style:solid!important;border-width:1px!important;border-radius:var(--button-radius)!important;font-family:inherit!important;font-size:var(--button-font-size)!important;font-weight:var(--button-weight)!important;line-height:var(--button-line-height)!important;letter-spacing:normal!important;text-decoration:none!important;white-space:nowrap!important;box-shadow:none!important;cursor:pointer;vertical-align:middle;transition:background-color .15s ease,border-color .15s ease,color .15s ease!important}
+:is(.btn,.reset-password-link,.recovery-card button,.ux-more-actions>summary,.modebar button):focus-visible{outline:3px solid var(--button-focus)!important;outline-offset:2px!important}
+:is(.btn,.recovery-card button,.modebar button):disabled{opacity:.5;cursor:not-allowed}
+:is(.btn,.reset-password-link,.recovery-card button,.modebar button) svg{width:18px;height:18px;flex:0 0 18px}
+.ux-more-actions>summary{margin:0!important;list-style:none}
+.ux-more-actions>summary::-webkit-details-marker{display:none}
+.ux-more-actions>summary::after{margin:0!important;font-size:12px}
+#customers>.top>.customer-main-actions>button.btn,#customers>.top>.customer-main-actions>button.btn.primary{height:var(--button-height)!important;min-height:var(--button-height)!important;max-height:var(--button-height)!important;padding:0 var(--button-padding-x)!important;font-size:var(--button-font-size)!important}
+/* Choice tiles retain room for their explanatory text. */
+.owner-mode-options>.btn{height:auto!important;min-height:var(--button-height)!important;padding:16px!important;white-space:normal!important;align-items:flex-start!important}
+.owner-mode-options>.btn .small{font-size:12px;font-weight:400;line-height:1.5}
+#property-setup .setup-topline>.btn::after{content:none!important}
+.choice .go{display:flex;align-items:center;justify-content:space-between;min-height:var(--button-height);border-radius:var(--button-radius);font-size:var(--button-font-size);font-weight:var(--button-weight);line-height:var(--button-line-height);padding:9px var(--button-padding-x)}
+@media(max-width:640px){:is(.actions,.map-quick-actions,.map-address-row,.topright){row-gap:8px}#customers>.top>.customer-main-actions>button.btn{width:100%!important;min-width:0!important}.billing-row-actions{gap:8px}.map-method-grid{grid-template-columns:1fr!important}#map .map-edit-tools .map-quick-actions{flex-wrap:wrap!important}#map .map-edit-tools .btn{flex-basis:100%!important}}
+@media(prefers-reduced-motion:reduce){:is(.btn,.reset-password-link,.recovery-card button,.ux-more-actions>summary,.modebar button){transition:none!important}}
+:is(.map-setup-nav>button,.ux-settings-nav>button,.ux-property-context nav>button){box-sizing:border-box;min-height:var(--button-height);height:var(--button-height);padding:0 var(--button-padding-x);border-width:1px;border-style:solid;border-radius:var(--button-radius)!important;font-family:inherit;font-size:var(--button-font-size);font-weight:var(--button-weight);line-height:var(--button-line-height);box-shadow:none!important}
+#ai .ai-suggestions button,.health-alert-item{border-radius:var(--button-radius)!important;border-width:1px;box-shadow:none!important}
+#ai .ai-suggestions strong{font-size:var(--button-font-size)!important;font-weight:var(--button-weight)!important}
+/* Inputs and selects share the action-button height; labels sit above controls. */
+input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]):not([type=hidden]):not([type=color]),select{box-sizing:border-box!important;height:var(--button-height)!important;min-height:var(--button-height)!important;max-height:var(--button-height)!important;border-radius:var(--button-radius)!important;line-height:var(--button-line-height)!important;padding-top:0!important;padding-bottom:0!important}
+.top>.topright{align-items:flex-end!important;gap:12px!important;flex-wrap:wrap}
+.top>.topright>label{display:grid!important;grid-template-columns:minmax(0,1fr);gap:7px!important;margin:0!important;line-height:18px;min-width:0}
+.top>.topright>label>select,.top>.topright>label>input{width:100%;margin:0!important}
+#history>.top>.topright{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;max-width:100%}
+#history>.top>.topright>label{flex:0 1 280px;min-width:200px;text-align:left;font-size:12px}
+#history>.top>.topright>.btn{flex:0 0 auto;margin:0}
+@media(max-width:640px){#history>.top>.topright{display:grid;grid-template-columns:minmax(0,1fr) auto;width:100%;align-items:end!important}#history>.top>.topright>label{min-width:0;width:100%}#history>.top>.topright>.btn{width:auto;min-width:0}}
+@media(max-width:360px){#history>.top>.topright{grid-template-columns:minmax(0,1fr)}#history>.top>.topright>.btn{width:100%}}
+@media(min-width:641px){#history>.top>.topright{width:max-content;flex-shrink:0;flex-wrap:nowrap!important}#history>.top>.topright>label{flex:0 0 280px}}
