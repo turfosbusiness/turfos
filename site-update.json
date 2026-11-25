@@ -10,7 +10,7 @@
     "pages/demo.html"
   ],
   "notes": [
-    "Pricing remains unspecified.",
+    "Pricing shows proposed monthly plans from section 7 of the Microgrant Business Plan.",
     "Interactive demo is clearly labeled sample data.",
     "Contact form opens an email draft, not a fake sent confirmation.",
     "Founder names and biographies retained."
